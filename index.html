@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-  <title>
-    D. J. Berko!
-  </title>
-
+  
   <style>
-    .picture{
-      width: 800px;
-      
+  /* CSS styles */
+  .image {
+      width: 700px;
+      height: 800px;
     }
+
+    .hidden {
+      display: none;
+    }
+
+    button{
+      display: block;
+      background-color: rgb(24, 125, 240);
+      border: none;
+      color: white;
+      height: 30px;
+      width: 200px;
+      cursor: pointer;
+      margin-left: 250px;
+     }
+
+     button:hover{
+      opacity: 0.7;
+    }
+
+     button:active{
+      opacity: 0.4;
+    }
+
   </style>
 
 </head>
 
+
 <body>
+  <img class="image" id="myImage1" src="pics/me.jpeg" alt="Image 1">
+  <img class="image hidden" id="myImage2" src="pics/real-me.jpg" alt="Image 2">
+  <button onclick="changeImage()">Click to see the REAL me</button>
 
-  <img class="picture" src="pics/me.jpeg">
+  <script>
+    // JavaScript function to change the image
+    function changeImage() {
+      var image1 = document.getElementById('myImage1');
+      var image2 = document.getElementById('myImage2');
 
+      image1.classList.toggle('hidden');
+      image2.classList.toggle('hidden');
+    }
+  </script>
 </body>
-
-</html>
+</html> 
