@@ -1,51 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  
-  <style>
-  /* CSS styles */
-  .image {
-      width: 700px;
-      height: 800px;
-    }
 
-    .hidden {
-      display: none;
-    }
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0C19PMQPWQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    button{
-      display: block;
-      background-color: rgb(24, 125, 240);
-      font-size:40px;
-      border: none;
-      border-radius:50px;
-      color: white;
-      height: 100px;
-      width: 400px;
-      cursor: pointer;
-      margin-left: 150px;
-      transition: opacity 0.15s, box-shadow 0.15s;
-     }
+  gtag('config', 'G-0C19PMQPWQ');
+</script>
 
-     button:hover{
-      opacity: 0.7;
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5)
-    }
-
-     button:active{
-      opacity: 0.4;
-      margin-left: 155px;
-      margin-top: 5px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5)
-      
-    }
-
-  </style>
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
-
 <body>
+  
   <img class="image" id="myImage1" src="pics/me.jpeg" alt="Image 1">
   <img class="image hidden" id="myImage2" src="pics/real-me.jpg" alt="Image 2">
   <button onclick="changeImage()">Click to see the REAL me</button>
@@ -60,5 +33,7 @@
       image2.classList.toggle('hidden');
     }
   </script>
+
 </body>
+
 </html> 
